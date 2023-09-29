@@ -1,0 +1,13 @@
+<BFTypedBinder binderType="TaxonomyXML" abstract="true">
+   <types>
+      <entity>
+         <actor>
+            <animal>
+            </animal>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+</BFTypedBinder>
