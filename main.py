@@ -37,7 +37,7 @@ result_classification = {}
 image_1 = PhotoImage(file = r".\assets\favicon_zt2library.png")
 image_2 = PhotoImage(file = r".\assets\favicon_wiki.png")
 image_3 = PhotoImage(file = r".\assets\quill_RoundIcons.png")
-# image_4 = PhotoImage(file = r".\assets\favicon_nexusmods.png")
+image_4 = PhotoImage(file = r".\assets\favicon_github.png")
 
 window.iconphoto(False, image_3)
 
@@ -221,10 +221,10 @@ button3 = tk.Button(bt_frame1, text="Get Taxonomy XML", command=lambda: taxonomy
 button3.pack(side=TOP, anchor=N)
 
 bt_frame1_1 = Frame(bt_frame1)
-bt_frame1_1.pack(side=TOP, ipadx=54)
+bt_frame1_1.pack(side=TOP, ipadx=39)
 
-# button7 = tk.Button(bt_frame1_1, text="Update", image=image_4, compound = LEFT, command=lambda: webbrowser.open('https://www.nexusmods.com/users/115343068?tab=user+files'))
-# button7.pack(side=LEFT, anchor=W, ipadx=1, ipady=1)
+button7 = tk.Button(bt_frame1_1, text="", image=image_4, compound = LEFT, command=lambda: webbrowser.open('https://github.com/Summjoke'))
+button7.pack(side=LEFT, anchor=W, ipadx=4, ipady=4)
 
 button4 = tk.Button(bt_frame1_1, text="?", command=lambda: MessageBox.showinfo(title="ZT2 Classification Editor", message=str_about_info))
 button4.pack(side=LEFT, anchor=W)

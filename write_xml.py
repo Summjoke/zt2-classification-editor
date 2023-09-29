@@ -35,8 +35,8 @@ def edit_xml(args):
     
     Premise = ['entity', 'actor', 'animal']
     
-    num_Complete = 0
-    XMLTypeName = result_classification[-1].get('name')
+    num_complete = 0
+    xml_typename = result_classification[-1].get('name')
     
     for i in range(len(trees)):
     
@@ -49,18 +49,18 @@ def edit_xml(args):
         for k in range(len(tag_entitys)):
             tag_types.remove(tag_entitys[k])        
         
-        ParentTag = root.find('types')
+        parent_tag = root.find('types')
         
-        List_RCFnames = {}
+        list_rcf_names = {}
         for k in range(len(result_classification)):
-            List_RCFnames[k] = result_classification[k].get('name')
+            list_rcf_names[k] = result_classification[k].get('name')
             
-        print(List_RCFnames)
-        List = Premise + list(List_RCFnames.values()) + [xml_names[i]]
+        print(list_rcf_names)
+        list_tags = Premise + list(list_rcf_names.values()) + [xml_names[i]]
 
-        for j in range(len(List)):
-            ET.SubElement(ParentTag, List[j])
-            ParentTag = ParentTag.find(List[j])
+        for j in range(len(list_tags)):
+            ET.SubElement(parent_tag, list_tags[j])
+            parent_tag = parent_tag.find(list_tags[j])
             
         #Write
         ET.indent(trees[i], '   ')
@@ -70,9 +70,9 @@ def edit_xml(args):
             MessageBox.showwarning(title="Problems", message="Solution: \nTry running this program as an administrator.")
             return
         else:
-            num_Complete += 1
+            num_complete += 1
              # os.startfile(xml_names[i]+'.xml')
         finally:
             pass
     
-    MessageBox.showinfo(title="Complete", message="Modified "+str(num_Complete)+" file(s) to "+XMLTypeName+" successfully.")
+    MessageBox.showinfo(title="Complete", message="Modified "+str(num_complete)+" file(s) to "+xml_typename+" successfully.")
