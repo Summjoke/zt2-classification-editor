@@ -1,2 +1,2 @@
 # zt2-classif-ed
-ZT2 classification editor.
+ZT2 animal classification easy editor.
