@@ -42,7 +42,7 @@ image_3 = PhotoImage(file = r".\assets\quill_RoundIcons.png")
 window.iconphoto(False, image_3)
 
  #List
-list_class, list_order, list_family, list_genus, list_species = animals.getList()
+list_class, list_order, list_family, list_genus, list_species = animals.get_list()
 
 # ListFrame
 listframe = Frame(window)

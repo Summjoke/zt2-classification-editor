@@ -7,7 +7,7 @@ import config
 tree = ET.parse('.\docs\TaxonomyEntries.xml')
 root = tree.getroot()
 
-def getList():
+def get_list():
 
     #Class
     list_class = root.findall('Class')
