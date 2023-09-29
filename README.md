@@ -1,2 +1,2 @@
 # zt2-classif-ed
-ZT2 classification easy editor.
+ZT2 classification editor.
