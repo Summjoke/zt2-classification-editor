@@ -1,8 +1,7 @@
 from tkinter import *
-import tkinter as tk
 import tkinter.messagebox as MessageBox
 import os
-from webbrowser import open
+import webbrowser
 
 import config
 import animals
@@ -13,15 +12,11 @@ import taxonomy_xml
 str_about_info = config.str_about_info
 
 # Window
-window = tk.Tk()
+window = Tk()
 
 window.title("ZT2 Classification Editor")
-window.geometry("610x380+300+120")
+window.geometry("610x390+300+120")
 
-#Class Label
-label_classification = tk.Label(window, text='\n'+"Classification Editor", justify=CENTER, height=5, anchor=N)
-label_classification.pack()
- 
  #Var
 
 idx_class = 0
@@ -37,39 +32,46 @@ image_1 = PhotoImage(file = r".\assets\favicon_zt2library.png")
 image_2 = PhotoImage(file = r".\assets\favicon_wiki.png")
 image_3 = PhotoImage(file = r".\assets\quill_RoundIcons.png")
 image_4 = PhotoImage(file = r".\assets\favicon_github.png")
+image_4 = PhotoImage(file = r".\assets\favicon_github.png")
 
+
+#Icon
 window.iconphoto(False, image_3)
+
+#Class Label
+label_classification = Label(window, text="Classification Editor\n\n", justify=CENTER, height=5, anchor=CENTER)
+label_classification.pack()
 
  #List
 list_class, list_order, list_family, list_genus, list_species = animals.get_list()
 
 # ListFrame
 listframe = Frame(window)
-listframe.pack()
+listframe.pack(expand=True, fill=Y)
 
 # Listbox
-lb1 = tk.Listbox(listframe, height=10)
+lb1 = Listbox(listframe, height=8)
 
 for item in list_class:
-    lb1.insert(tk.END, item.get('name'))
+    lb1.insert(END, item.get('name'))
 
-lb1.pack(side=LEFT)
+lb1.pack(side=LEFT, expand=True, fill=Y)
 
 # Listbox2
-lb2 = tk.Listbox(listframe, height=10)
-lb2.pack(side=LEFT)
+lb2 = Listbox(listframe, height=8)
+lb2.pack(side=LEFT, expand=True, fill=Y)
 
 # Listbox3
-lb3 = tk.Listbox(listframe, height=10)
-lb3.pack(side=LEFT)
+lb3 = Listbox(listframe, height=8)
+lb3.pack(side=LEFT, expand=True, fill=Y)
 
 # Listbox4
-lb4 = tk.Listbox(listframe, height=5)
-lb4.pack(side=TOP)
+lb4 = Listbox(listframe, height=4)
+lb4.pack(side=TOP, expand=True, fill=Y)
 
 # Listbox5
-lb5 = tk.Listbox(listframe, height=5)
-lb5.pack(side=TOP)
+lb5 = Listbox(listframe, height=4)
+lb5.pack(side=TOP, expand=True, fill=Y)
 
 def lb1_event(event):
     global idx_class
@@ -79,7 +81,7 @@ def lb1_event(event):
         idx_class = item
         label_text()
         for i in list_order[idx_class]:
-            lb2.insert(tk.END, i.get('name'))
+            lb2.insert(END, i.get('name'))
             
         output_classification()
         enable_test_button1()
@@ -93,7 +95,7 @@ def lb2_event(event):
         idx_order = item
         label_text()
         for i in list_family[idx_class][idx_order]:
-            lb3.insert(tk.END, i.get('name'))
+            lb3.insert(END, i.get('name'))
             
         output_classification()
         enable_test_button1()
@@ -108,7 +110,7 @@ def lb3_event(event):
         idx_family = item
         label_text()
         for i in list_genus[idx_class][idx_order][idx_family]:
-            lb4.insert(tk.END, i.get('name'))            
+            lb4.insert(END, i.get('name'))            
                
         output_classification()
         enable_test_button1()
@@ -124,7 +126,7 @@ def lb4_event(event):
         idx_genus = item
         label_text()
         for i in list_species[idx_class][idx_order][idx_family][idx_genus]:
-            lb5.insert(tk.END, i.get('name'))
+            lb5.insert(END, i.get('name'))
             
         output_classification()
         enable_test_button1()
@@ -179,23 +181,22 @@ def enable_test_button1():
         button2.config(state=DISABLED)
 
 def label_text():
-    text = ['\n', '', '', '', '']
+    mytext = ['','','','','']
     if lb1.size() > 0 :
-        text[1] = 'Class: '+list_class[idx_class].get('name')
+        mytext[0] = 'Class: '+list_class[idx_class].get('name')
     if lb2.size() > 0 :
-        text[2] = '\n'+'Order: '+list_order[idx_class][idx_order].get('name')
+        mytext[1] = '\nOrder: '+list_order[idx_class][idx_order].get('name')
+    else:        
+        mytext[1] = '\n'
     if lb3.size() > 0 :
-        text[3] = '\n'+'Family: '+list_family[idx_class][idx_order][idx_family].get('name')
+        mytext[2] = '\nFamily: '+list_family[idx_class][idx_order][idx_family].get('name')
+    else:        
+        mytext[2] = '\n'
     if lb4.size() > 0 :
-    
-        #Visual Adjust
-        for i in range(3):
-            text[i] = text[i+1]
-            
-        text[3] = '\n'+'Genus: '+list_genus[idx_class][idx_order][idx_family][idx_genus].get('name')
+        mytext[3] = '\nGenus: '+list_genus[idx_class][idx_order][idx_family][idx_genus].get('name')
     if lb5.size() > 0 :
-        text[4] = '\n'+'Species: '+list_species[idx_class][idx_order][idx_family][idx_genus][idx_species].get('name')
-    label_classification.config(text = text[0]+text[1]+text[2]+text[3]+text[4])
+        mytext[4] = '\nSpecies: '+list_species[idx_class][idx_order][idx_family][idx_genus][idx_species].get('name')
+    label_classification.config(text = "".join([mytext[0], mytext[1], mytext[2], mytext[3], mytext[4]]))
     
 def clear_list(args):
     names = globals()
@@ -205,7 +206,7 @@ def clear_list(args):
 
 # Buttons and Frames
 bt_frame = Frame(window)
-bt_frame.pack(side=TOP, ipady=10)
+bt_frame.pack(side=BOTTOM, ipady=25)
 
 bt_frame1 = Frame(bt_frame)
 bt_frame1.pack(side=LEFT)
@@ -216,29 +217,29 @@ bt_frame2.pack(side=LEFT, padx=65)
 bt_frame3 = Frame(bt_frame)
 bt_frame3.pack(side=LEFT, padx=10, ipadx=25, ipady=15)
 
-button3 = tk.Button(bt_frame1, text="Get Taxonomy XML", command=lambda: taxonomy_xml.get_taxonomy_xml(result_classification))
+button3 = Button(bt_frame1, text="Get Taxonomy XML", command=lambda: taxonomy_xml.get_taxonomy_xml(result_classification))
 button3.pack(side=TOP, anchor=N)
 
 bt_frame1_1 = Frame(bt_frame1)
 bt_frame1_1.pack(side=TOP, ipadx=39)
 
-button7 = tk.Button(bt_frame1_1, text="", image=image_4, compound = LEFT, command=lambda: open('https://github.com/Summjoke'))
+button7 = Button(bt_frame1_1, text="", image=image_4, compound = LEFT, command=lambda: webbrowser.open('https://github.com/Summjoke'))
 button7.pack(side=LEFT, anchor=W, ipadx=4, ipady=4)
 
-button4 = tk.Button(bt_frame1_1, text="?", command=lambda: MessageBox.showinfo(title="Instruction", message=str_about_info))
+button4 = Button(bt_frame1_1, text="?", command=lambda: MessageBox.showinfo(title="Instruction", message=str_about_info))
 button4.pack(side=LEFT, anchor=W)
 
-button1 = tk.Button(bt_frame2, text="Select Main XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button1()])
+button1 = Button(bt_frame2, text="Select Main XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button1()])
 button1.pack(side=TOP)
 
-button2 = tk.Button(bt_frame2, text="Modify Types and Save", command=lambda: write_xml.edit_xml([write_xml.xml_trees, result_classification]))
+button2 = Button(bt_frame2, text="Modify Types and Save", command=lambda: write_xml.edit_xml([write_xml.xml_trees, result_classification]))
 button2.config(state=DISABLED)
 button2.pack(side=TOP)
 
-button5 = tk.Button(bt_frame3, text="", image=image_2, compound = LEFT, command=lambda: taxonomy_xml.open_wiki(['Wikipedia', result_classification]))
+button5 = Button(bt_frame3, text="", image=image_2, compound = LEFT, command=lambda: taxonomy_xml.open_wiki(['Wikipedia', result_classification]))
 button5.pack(side=LEFT, anchor=N, ipadx=4, ipady=4)
 
-button6 = tk.Button(bt_frame3, text="", image=image_1, compound = LEFT, command=lambda: taxonomy_xml.open_wiki(['ZT2Library', result_classification]))
+button6 = Button(bt_frame3, text="", image=image_1, compound = LEFT, command=lambda: taxonomy_xml.open_wiki(['ZT2Library', result_classification]))
 button6.pack(side=LEFT, anchor=N, ipadx=4, ipady=4)
 
 

@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import tkinter.messagebox as MessageBox
 import os
-from webbrowser import open
+import webbrowser
 
 import config
 
@@ -71,4 +71,4 @@ def open_wiki(args):
         return
         
     url = webdir + linkname
-    open(url)
+    webbrowser.open(url)
