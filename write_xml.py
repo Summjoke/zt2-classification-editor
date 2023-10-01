@@ -33,7 +33,7 @@ def edit_xml(args):
     trees = args[0]
     result_classification = args[1]
     
-    Premise = ['entity', 'actor', 'animal']
+    premise = ['entity', 'actor', 'animal']
     
     num_complete = 0
     xml_typename = result_classification[-1].get('name')
@@ -56,7 +56,7 @@ def edit_xml(args):
             list_rcf_names[k] = result_classification[k].get('name')
             
         print(list_rcf_names)
-        list_tags = Premise + list(list_rcf_names.values()) + [xml_names[i]]
+        list_tags = premise + list(list_rcf_names.values()) + [xml_names[i]]
 
         for j in range(len(list_tags)):
             ET.SubElement(parent_tag, list_tags[j])
@@ -67,7 +67,7 @@ def edit_xml(args):
         try:
             if_write = trees[i].write(xml_filenames[i], encoding="utf-8", xml_declaration=False)
         except IOError:
-            MessageBox.showwarning(title="Problems", message="Solution: \nTry running this program as an administrator.")
+            MessageBox.showwarning(title="Problem", message="Solutions: \n1. Try running this program as an administrator. \n2. The XMLs cannot be read-only.")
             return
         else:
             num_complete += 1
@@ -75,4 +75,10 @@ def edit_xml(args):
         finally:
             pass
     
-    MessageBox.showinfo(title="Complete", message="Modified "+str(num_complete)+" file(s) to "+xml_typename+" successfully.")
+    if num_complete == 1 :
+        unit = 'file'
+    else:
+        unit = 'files'
+    
+    MessageBox.showinfo(title="Complete", message= " ".join (["Modified", str(num_complete), unit, "to", xml_typename+'.']))
+    

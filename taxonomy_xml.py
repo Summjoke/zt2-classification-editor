@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import tkinter.messagebox as MessageBox
 import os
-import webbrowser
+from webbrowser import open
 
 import config
 
@@ -41,7 +41,7 @@ def get_taxonomy_xml(result_classification):
     try:
         if_write = tree.write(xml_typename+'.xml', encoding="utf-8", xml_declaration=False)
     except IOError:
-        MessageBox.showwarning(title="Problems", message="Solution: \nTry running this program as an administrator.")
+        MessageBox.showwarning(title="Problem", message="Solution: \nTry running this program as an administrator.")
         return
     else:
         # os.startfile(xml_typename+'.xml')
@@ -49,7 +49,7 @@ def get_taxonomy_xml(result_classification):
     finally:
         pass
         
-    MessageBox.showinfo(title="Complete", message="Generated the "+xml_typename+".xml successfully.")
+    MessageBox.showinfo(title="Complete", message=" ".join(["Generated the", xml_typename+'.xml.']))
 
 def open_wiki(args):
     website = args[0]
@@ -70,5 +70,5 @@ def open_wiki(args):
     else:
         return
         
-    Url = webdir + linkname
-    webbrowser.open(Url)
+    url = webdir + linkname
+    open(url)
