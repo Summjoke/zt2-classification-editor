@@ -32,7 +32,6 @@ image_1 = PhotoImage(file = r".\assets\favicon_zt2library.png")
 image_2 = PhotoImage(file = r".\assets\favicon_wiki.png")
 image_3 = PhotoImage(file = r".\assets\quill_RoundIcons.png")
 image_4 = PhotoImage(file = r".\assets\favicon_github.png")
-image_4 = PhotoImage(file = r".\assets\favicon_github.png")
 
 
 #Icon
