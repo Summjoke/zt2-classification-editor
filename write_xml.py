@@ -10,7 +10,6 @@ import config
 xml_trees = {}
 
 xml_filenames = {}
-xml_names = {}
 
 
 def get_xmls():
@@ -42,25 +41,49 @@ def edit_xml(args):
     
         root = trees[i].getroot()
         
-        xml_names[i] = root.get('binderType')
+        xml_mainname = root.get('binderType').split('_', 1)[0]
+        xml_resnames = []
         
         tag_types = root.find('types')
-        tag_entitys = tag_types.findall('entity')
-        for k in range(len(tag_entitys)):
-            tag_types.remove(tag_entitys[k])        
         
-        parent_tag = root.find('types')
+        #Find main name node
+        tag_record = tag_types
+        while list(tag_record) != []:
+            if list(tag_record)[0].tag == xml_mainname:
+                tag_mainname = list(tag_record)[0]
+                break
+            else:
+                tag_record = list(tag_record)[0]
+        else:
+            tag_mainname = tag_record
+                
+        # print('P1: ', tag_mainname)
         
-        list_rcf_names = {}
-        for k in range(len(result_classification)):
-            list_rcf_names[k] = result_classification[k].get('name')
+        tag_reserve = tag_mainname
+        xml_resnames.append(tag_reserve.tag)
+        
+        #Add reserve nodes
+        while list(tag_reserve) != []:
+            xml_resnames.append(list(tag_reserve)[0].tag)
+            tag_reserve = list(tag_reserve)[0]
+        
+        # print('P2: ', xml_resnames)
+        
+        
+        tag_types.remove(tag_types.find('entity'))
+        
+        parent_tag = tag_types
+        
+        list_rcf_names = []
+        for item in result_classification:
+            list_rcf_names.append(item.get('name'))
             
-        print(list_rcf_names)
-        list_tags = premise + list(list_rcf_names.values()) + [xml_names[i]]
+        list_tags = premise + list_rcf_names + xml_resnames
+        print(list_tags)
 
-        for j in range(len(list_tags)):
-            ET.SubElement(parent_tag, list_tags[j])
-            parent_tag = parent_tag.find(list_tags[j])
+        for item in list_tags:
+            ET.SubElement(parent_tag, item)
+            parent_tag = parent_tag.find(item)
             
         #Write
         ET.indent(trees[i], '   ')
@@ -71,7 +94,7 @@ def edit_xml(args):
             return
         else:
             num_complete += 1
-             # os.startfile(xml_names[i]+'.xml')
+             # os.startfile(xml_filenames[i]+'.xml')
         finally:
             pass
     

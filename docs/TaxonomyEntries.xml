@@ -1,261 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Animals>
 	<Class name="Aves" wiki="Birds">
-		<Order name="Bucerotiformes">
-			<Family name="Bucerotidae">
-				<Genus name="A1">
-					<Species name="A2"/>
-				</Genus>
-			</Family>
+		<Order name="Anseriformes" wiki="">
+			<Family name="Anseranatidae" wiki=""/>
 		</Order>
-		<Order name="Ciconiiformes">
-			<Family name="Threskiornithidae"/>
+		<Order name="Bucerotiformes" wiki="">
+			<Family name="Bucerotidae" wiki=""/>
 		</Order>
-		<Order name="Coraciiformes">
-			<Family name="Alcedinidae"/>
-			<Family name="Meropidae"/>
+		<Order name="Ciconiiformes" wiki="">
+			<Family name="Threskiornithidae" wiki=""/>
 		</Order>
-		<Order name="Columbiformes">
-			<Family name="Raphidae"/>
+		<Order name="Coraciiformes" wiki="">
+			<Family name="Alcedinidae" wiki=""/>
+			<Family name="Meropidae" wiki=""/>
 		</Order>
-		<Order name="Falconiformes">
-			<Family name="Sagittaridae"/>
+		<Order name="Columbiformes" wiki="">
+			<Family name="Raphidae" wiki=""/>
 		</Order>
-		<Order name="Galliformes">
-			<Family name="Phasianidae"/>
+		<Order name="Falconiformes" wiki="">
+			<Family name="Sagittaridae" wiki=""/>
 		</Order>
-		<Order name="Passeriformes">
-			<Family name="Corvidae"/>
-			<Family name="Paradisaeidae"/>
+		<Order name="Galliformes" wiki="">
+			<Family name="Phasianidae" wiki=""/>
 		</Order>
-		<Order name="Gruiformes">
-			<Family name="Rallidae"/>
+		<Order name="Passeriformes" wiki="">
+			<Family name="Corvidae" wiki=""/>
+			<Family name="Paradisaeidae" wiki=""/>
 		</Order>
-		<Order name="Struthioniformes">
-			<Family name="Apterygidae"/>
+		<Order name="Gruiformes" wiki="">
+			<Family name="Rallidae" wiki=""/>
 		</Order>
-		<Order name="Pelecaniformes">
-			<Family name="Balaenicipitidae"/>
-			<Family name="Pelecanidae"/>
+		<Order name="Struthioniformes" wiki="">
+			<Family name="Apterygidae" wiki=""/>
 		</Order>
-		<Order name="Psittaciformes">
-			<Family name="Cacatuidae"/>
-			<Family name="Psittacidae"/>
+		<Order name="Pelecaniformes" wiki="">
+			<Family name="Balaenicipitidae" wiki=""/>
+			<Family name="Pelecanidae" wiki=""/>
 		</Order>
-		<Order name="Eurypygiformes">
-			<Family name="Rhynochetidae"/>
+		<Order name="Psittaciformes" wiki="">
+			<Family name="Cacatuidae" wiki=""/>
+			<Family name="Psittacidae" wiki=""/>
 		</Order>
-		<Order name="Otidiformes">
-			<Family name="Otididae"/>
+		<Order name="Eurypygiformes" wiki="">
+			<Family name="Rhynochetidae" wiki=""/>
 		</Order>
-		<Order name="Phoenicopteriformes">
-			<Family name="Phoenicopteridae"/>
+		<Order name="Otidiformes" wiki="">
+			<Family name="Otididae" wiki=""/>
 		</Order>
-		<Order name="Piciformes">
-			<Family name="Picidae"/>
-			<Family name="Ramphastidae"/>
+		<Order name="Trogoniformes" wiki="">
+			<Family name="Trogonidae" wiki=""/>
 		</Order>
-		<Order name="Strigiformes">
-			<Family name="Strigidae"/>
+		<Order name="Phoenicopteriformes" wiki="">
+			<Family name="Phoenicopteridae" wiki=""/>
 		</Order>
-		<Order name="Struthioniformes">
-			<Family name="Struthionidae"/>
+		<Order name="Piciformes" wiki="">
+			<Family name="Picidae" wiki=""/>
+			<Family name="Ramphastidae" wiki=""/>
 		</Order>
-		<Order name="Trogoniformes">
-			<Family name="Trogonidae"/>
+		<Order name="Strigiformes" wiki="">
+			<Family name="Strigidae" wiki=""/>
 		</Order>
-		<Order name="Sphenisciformes">
-			<Family name="Spheniscidae"/>
+		<Order name="Struthioniformes" wiki="">
+			<Family name="Struthionidae" wiki=""/>
+		</Order>
+		<Order name="Trogoniformes" wiki="">
+			<Family name="Trogonidae" wiki=""/>
+		</Order>
+		<Order name="Sphenisciformes" wiki="">
+			<Family name="Spheniscidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Mammalia" wiki="Mammals">
-		<Order name="Artiodactyla">
-			<Family name="Camelidae"/>
-			<Family name="Giraffidae"/>
-			<Family name="Bovidae"/>
-			<Family name="Suidae"/>
-			<Family name="Cervidae"/>
-			<Family name="Hippopotamidae"/>
+		<Order name="Artiodactyla" wiki="">
+			<Family name="Camelidae" wiki=""/>
+			<Family name="Giraffidae" wiki=""/>
+			<Family name="Bovidae" wiki=""/>
+			<Family name="Suidae" wiki=""/>
+			<Family name="Cervidae" wiki=""/>
+			<Family name="Hippopotamidae" wiki=""/>
 		</Order>
-		<Order name="Dasyuromorphia">
-			<Family name="Thylacinidae"/>
+		<Order name="Dasyuromorphia" wiki="">
+			<Family name="Thylacinidae" wiki=""/>
 		</Order>
-		<Order name="Primata">
-			<Family name="Circopithecidae"/>
-			<Family name="Pongidae"/>
-			<Family name="Hylobatidae"/>
-			<Family name="Lemuridae"/>
+		<Order name="Primata" wiki="">
+			<Family name="Circopithecidae" wiki=""/>
+			<Family name="Pongidae" wiki=""/>
+			<Family name="Hylobatidae" wiki=""/>
+			<Family name="Lemuridae" wiki=""/>
 		</Order>
-		<Order name="Carnivora">
-			<Family name="Canidae"/>
-			<Family name="Hyaenidae"/>
-			<Family name="Phocidae"/>
-			<Family name="Mustelidae"/>
-			<Family name="Ursidae"/>
-			<Family name="Felidae"/>
-			<Family name="Otariidae"/>
-			<Family name="Odobenidae"/>
-			<Family name="Viverridae"/>
+		<Order name="Carnivora" wiki="">
+			<Family name="Canidae" wiki=""/>
+			<Family name="Eupleridae" wiki=""/>
+			<Family name="Felidae" wiki=""/>
+			<Family name="Hyaenidae" wiki=""/>
+			<Family name="Herpestidae" wiki=""/>
+			<Family name="Mustelidae" wiki=""/>
+			<Family name="Mephitidae" wiki=""/>
+			<Family name="Nandiniidae" wiki=""/>
+			<Family name="Otariidae" wiki=""/>
+			<Family name="Odobenidae" wiki=""/>
+			<Family name="Phocidae" wiki=""/>
+			<Family name="Procyonidae" wiki=""/>
+			<Family name="Prionodontidae" wiki=""/>
+			<Family name="Ursidae" wiki=""/>
+			<Family name="Viverridae" wiki=""/>
 		</Order>
-		<Order name="Cetacea">
-			<Family name="Delphinidae"/>
-			<Family name="Monodontidae"/>
+		<Order name="Cetacea" wiki="">
+			<Family name="Delphinidae" wiki=""/>
+			<Family name="Monodontidae" wiki=""/>
 		</Order>
-		<Order name="Perissodactyla">
-			<Family name="Rhinocerotidae"/>
-			<Family name="Equidae"/>
+		<Order name="Perissodactyla" wiki="">
+			<Family name="Rhinocerotidae" wiki=""/>
+			<Family name="Equidae" wiki=""/>
 		</Order>
-		<Order name="Chiroptera">
-			<Family name="Vespertilionidae"/>
+		<Order name="Chiroptera" wiki="">
+			<Family name="Vespertilionidae" wiki=""/>
 		</Order>
-		<Order name="Cingulata">
-			<Family name="Dasypodidae"/>
+		<Order name="Cingulata" wiki="">
+			<Family name="Dasypodidae" wiki=""/>
 		</Order>
-		<Order name="Diprodonta">
-			<Family name="Macropodidae"/>
-			<Family name="Phascolarctidae"/>
+		<Order name="Didelphimorphia" wiki="">
+			<Family name="Didelphidae" wiki=""/>
 		</Order>
-		<Order name="Diprotodontia">
-			<Family name="Phascolarctidae"/>
+		<Order name="Diprodonta" wiki="">
+			<Family name="Macropodidae" wiki=""/>
+			<Family name="Phascolarctidae" wiki=""/>
 		</Order>
-		<Order name="Eulipotyphla">
-			<Family name="Erinaceidae"/>
+		<Order name="Diprotodontia" wiki="">
+			<Family name="Phascolarctidae" wiki=""/>
 		</Order>
-		<Order name="Hyracoidea">
-			<Family name="Procaviidae"/>
+		<Order name="Eulipotyphla" wiki="">
+			<Family name="Erinaceidae" wiki=""/>
 		</Order>
-		<Order name="Lagomorpha">
-			<Family name="Leporidae"/>
+		<Order name="Hyracoidea" wiki="">
+			<Family name="Procaviidae" wiki=""/>
 		</Order>
-		<Order name="Pholidota">
-			<Family name="Manidae"/>
+		<Order name="Lagomorpha" wiki="">
+			<Family name="Leporidae" wiki=""/>
 		</Order>
-		<Order name="Proboscidea">
-			<Family name="Elephantidae"/>
+		<Order name="Pholidota" wiki="">
+			<Family name="Manidae" wiki=""/>
 		</Order>
-		<Order name="Macroscelidea">
-			<Family name="Macroscelididae"/>
+		<Order name="Proboscidea" wiki="">
+			<Family name="Elephantidae" wiki=""/>
 		</Order>
-		<Order name="Marsupialia">
-			<Family name="Pilosa">
-				<Genus name="Bradypodidae"/>
-			</Family>
+		<Order name="Macroscelidea" wiki="">
+			<Family name="Macroscelididae" wiki=""/>
 		</Order>
-		<Order name="Monotremata">
-			<Family name="Ornithorhynchidae"/>
+		<Order name="Pilosa" wiki="">
+			<Family name="Bradypodidae" wiki=""/>
 		</Order>
-		<Order name="Rodentia">
-			<Family name="Castoridae"/>
-			<Family name="Caviidae"/>
-			<Family name="Dipodidae"/>
-			<Family name="Sciuridae"/>
+		<Order name="Monotremata" wiki="">
+			<Family name="Ornithorhynchidae" wiki=""/>
 		</Order>
-		<Order name="Sirenia">
-			<Family name="Trichechidae"/>
+		<Order name="Rodentia" wiki="">
+			<Family name="Castoridae" wiki=""/>
+			<Family name="Caviidae" wiki=""/>
+			<Family name="Dipodidae" wiki=""/>
+			<Family name="Sciuridae" wiki=""/>
 		</Order>
-		<Order name="Tubulidentata">
-			<Family name="Orycteropodidae"/>
+		<Order name="Sirenia" wiki="">
+			<Family name="Trichechidae" wiki=""/>
+		</Order>
+		<Order name="Tubulidentata" wiki="">
+			<Family name="Orycteropodidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Reptilia" wiki="Reptiles">
-		<Order name="Squamata">
-			<Family name="Chamaeleonidae"/>
-			<Family name="Gekkonidae"/>
-			<Family name="Iguanidae"/>
-			<Family name="Varanidae"/>
+		<Order name="Squamata" wiki="">
+			<Family name="Chamaeleonidae" wiki=""/>
+			<Family name="Gekkonidae" wiki=""/>
+			<Family name="Iguanidae" wiki=""/>
+			<Family name="Varanidae" wiki=""/>
+			<Family name="Mosasauridae" wiki=""/>
 		</Order>
-		<Order name="Crocodylia">
-			<Family name="Crocodylidae"/>
-			<Family name="Gavialidae"/>
+		<Order name="Crocodylia" wiki="">
+			<Family name="Crocodylidae" wiki=""/>
+			<Family name="Gavialidae" wiki=""/>
 		</Order>
-		<Order name="Ichthyosauria">
-			<Family name="Ophthalmosauridae"/>
+		<Order name="Ichthyosauria" wiki="">
+			<Family name="Ophthalmosauridae" wiki=""/>
 		</Order>
-		<Order name="Plesiosauria">
-			<Family name="Pliosauridae"/>
+		<Order name="Plesiosauria" wiki="">
+			<Family name="Pliosauridae" wiki=""/>
 		</Order>
-		<Order name="Rhynchocephalia">
-			<Family name="Sphenodontidae"/>
+		<Order name="Rhynchocephalia" wiki="">
+			<Family name="Sphenodontidae" wiki=""/>
 		</Order>
-		<Order name="Testudines">
-			<Family name="Cheloniidae"/>
-			<Family name="Testudinae"/>
+		<Order name="Testudines" wiki="">
+			<Family name="Cheloniidae" wiki=""/>
+			<Family name="Testudinae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Amphibia" wiki="Amphibians">
-		<Order name="Anura">
-			<Family name="Ranidae"/>
+		<Order name="Anura" wiki="">
+			<Family name="Ranidae" wiki=""/>
 		</Order>
-		<Order name="Caudata">
-			<Family name="Proteidae"/>
-			<Family name="Salamandridae"/>
+		<Order name="Caudata" wiki="">
+			<Family name="Proteidae" wiki=""/>
+			<Family name="Salamandridae" wiki=""/>
 		</Order>
-		<Order name="Temnospondyli">
-			<Family name="Chigutisauridae"/>
+		<Order name="Temnospondyli" wiki="">
+			<Family name="Chigutisauridae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Actinopterygii" wiki="">
-		<Order name="Acipenseriformes">
-			<Family name="Acipenseridae"/>
-			<Family name="Muraenidae"/>
+		<Order name="Acipenseriformes" wiki="">
+			<Family name="Acipenseridae" wiki=""/>
+			<Family name="Muraenidae" wiki=""/>
 		</Order>
-		<Order name="Perciformes">
-			<Family name="Istiophoridae"/>
+		<Order name="Perciformes" wiki="">
+			<Family name="Istiophoridae" wiki=""/>
 		</Order>
-		<Order name="Pleuronectiformes">
-			<Family name="Pleuronectidae"/>
+		<Order name="Pleuronectiformes" wiki="">
+			<Family name="Pleuronectidae" wiki=""/>
 		</Order>
-		<Order name="Salmoniformes">
-			<Family name="Esocidae"/>
+		<Order name="Salmoniformes" wiki="">
+			<Family name="Esocidae" wiki=""/>
 		</Order>
-		<Order name="Siluriformes">
-			<Family name="Siluridae"/>
+		<Order name="Siluriformes" wiki="">
+			<Family name="Siluridae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Chondrichthyes" wiki="">
-		<Order name="Carcharhiniformes">
-			<Family name="Carcharhinidae"/>
+		<Order name="Carcharhiniformes" wiki="">
+			<Family name="Carcharhinidae" wiki=""/>
 		</Order>
-		<Order name="Hybodontiformes">
-			<Family name="Hybodontidae"/>
+		<Order name="Hybodontiformes" wiki="">
+			<Family name="Hybodontidae" wiki=""/>
 		</Order>
-		<Order name="Lamniformes">
-			<Family name="Mitsukurinidae"/>
+		<Order name="Lamniformes" wiki="">
+			<Family name="Mitsukurinidae" wiki=""/>
 		</Order>
-		<Order name="Rajiformes">
-			<Family name="Rajidae"/>
-			<Family name="Myliobatidae"/>
+		<Order name="Rajiformes" wiki="">
+			<Family name="Rajidae" wiki=""/>
+			<Family name="Myliobatidae" wiki=""/>
+		</Order>
+	</Class>
+	<Class name="Placodermi" wiki="">
+		<Order name="Arthrodira" wiki="">
+			<Family name="Dunkleosteidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Archosauria" wiki="">
-		<Order name="Pseudosuchia">
-			<Family name="Rauisuchidae"/>
+		<Order name="Pseudosuchia" wiki="">
+			<Family name="Rauisuchidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Sauropsida" wiki="">
-		<Order name="Ornithischia">
-			<Family name="Hadrosauridae"/>
-			<Family name="Neornithischia"/>
+		<Order name="Ornithischia" wiki="">
+			<Family name="Hadrosauridae" wiki=""/>
+			<Family name="Neornithischia" wiki=""/>
 		</Order>
-		<Order name="Pterosauria">
-			<Family name="Azhdarchidae"/>
-			<Family name="Dimorphodontidae"/>
-			<Family name="Pteranodontidae"/>
+		<Order name="Pterosauria" wiki="">
+			<Family name="Azhdarchidae" wiki=""/>
+			<Family name="Dimorphodontidae" wiki=""/>
+			<Family name="Pteranodontidae" wiki=""/>
 		</Order>
-		<Order name="Saurischia">
-			<Family name="Alvarezsauridae"/>
-			<Family name="Sauropodomorpha"/>
-			<Family name="Therizinosauridae"/>
+		<Order name="Saurischia" wiki="">
+			<Family name="Alvarezsauridae" wiki=""/>
+			<Family name="Sauropodomorpha" wiki=""/>
+			<Family name="Therizinosauridae" wiki=""/>
+		</Order>
+	</Class>
+	<Class name="Synapsida" wiki="">
+		<Order name="Pelycosauria" wiki="">
+			<Family name="Sphenacodontidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Cephalopoda" wiki="">
-		<Order name="Ammonoidea">
-			<Family name="Arietitidae"/>
+		<Order name="Ammonoidea" wiki="">
+			<Family name="Arietitidae" wiki=""/>
 		</Order>
 	</Class>
 	<Class name="Arachnida" wiki="">
-		<Order name="Araneae">
-			<Family name="Theraphosidae"/>
+		<Order name="Araneae" wiki="">
+			<Family name="Theraphosidae" wiki=""/>
+		</Order>
+	</Class>
+	<Class name="Insecta" wiki="">
+		<Order name="Coleoptera" wiki="">
+			<Family name="Scarabaeidae" wiki=""/>
+		</Order>
+	</Class>
+	<Class name="Scyphozoa" wiki="">
+		<Order name="Rhizostomeae" wiki="">
+			<Family name="Stomolophidae" wiki=""/>
+		</Order>
+	</Class>
+	<Class name="Gastropoda" wiki="">
+		<Order name="Stylommatophora" wiki="">
+			<Family name="Ariolimacidae" wiki=""/>
 		</Order>
 	</Class>
 </Animals>

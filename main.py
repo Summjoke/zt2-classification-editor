@@ -2,20 +2,21 @@ from tkinter import *
 import tkinter.messagebox as MessageBox
 import os
 import webbrowser
+import random
 
 import config
 import animals
 import write_xml
 import taxonomy_xml
 
-
 str_about_info = config.str_about_info
+str_hello = random.choice(config.str_hello)
 
 # Window
 window = Tk()
 
 window.title("ZT2 Classification Editor")
-window.geometry("610x390+300+120")
+window.geometry("610x385+300+120")
 
  #Var
 
@@ -38,7 +39,7 @@ image_4 = PhotoImage(file = r".\assets\favicon_github.png")
 window.iconphoto(False, image_3)
 
 #Class Label
-label_classification = Label(window, text="Classification Editor\n\n", justify=CENTER, height=5, anchor=CENTER)
+label_classification = Label(window, text=str_hello, justify=CENTER, height=5, anchor=CENTER)
 label_classification.pack()
 
  #List
@@ -56,19 +57,15 @@ for item in list_class:
 
 lb1.pack(side=LEFT, expand=True, fill=Y)
 
-# Listbox2
 lb2 = Listbox(listframe, height=8)
 lb2.pack(side=LEFT, expand=True, fill=Y)
 
-# Listbox3
 lb3 = Listbox(listframe, height=8)
 lb3.pack(side=LEFT, expand=True, fill=Y)
 
-# Listbox4
 lb4 = Listbox(listframe, height=4)
 lb4.pack(side=TOP, expand=True, fill=Y)
 
-# Listbox5
 lb5 = Listbox(listframe, height=4)
 lb5.pack(side=TOP, expand=True, fill=Y)
 
@@ -211,16 +208,16 @@ bt_frame1 = Frame(bt_frame)
 bt_frame1.pack(side=LEFT)
 
 bt_frame2 = Frame(bt_frame)
-bt_frame2.pack(side=LEFT, padx=65)
+bt_frame2.pack(side=LEFT, padx=68)
 
 bt_frame3 = Frame(bt_frame)
-bt_frame3.pack(side=LEFT, padx=10, ipadx=25, ipady=15)
+bt_frame3.pack(side=LEFT, padx=7, ipadx=25, ipady=15)
 
 button3 = Button(bt_frame1, text="Get Taxonomy XML", command=lambda: taxonomy_xml.get_taxonomy_xml(result_classification))
 button3.pack(side=TOP, anchor=N)
 
 bt_frame1_1 = Frame(bt_frame1)
-bt_frame1_1.pack(side=TOP, ipadx=39)
+bt_frame1_1.pack(side=TOP, expand=True, fill=X)
 
 button7 = Button(bt_frame1_1, text="", image=image_4, compound = LEFT, command=lambda: webbrowser.open('https://github.com/Summjoke'))
 button7.pack(side=LEFT, anchor=W, ipadx=4, ipady=4)

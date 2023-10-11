@@ -27,14 +27,14 @@ def get_taxonomy_xml(result_classification):
     
     parent_tag = parent_tag4
     
-    list_tags = {}
-    for i in range(len(result_classification)):
-        list_tags[i] = result_classification[i].get('name')
+    list_tags = []
+    for item in result_classification:
+        list_tags.append(item.get('name'))
     
 
-    for i in range(len(list_tags)):
-        ET.SubElement(parent_tag, list_tags[i])
-        parent_tag = parent_tag.find(list_tags[i])
+    for item in list_tags:
+        ET.SubElement(parent_tag, item)
+        parent_tag = parent_tag.find(item)
         
     #Write
     ET.indent(tree, '   ')
