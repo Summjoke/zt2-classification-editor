@@ -55,7 +55,12 @@ def edit_xml(args):
             else:
                 tag_record = list(tag_record)[0]
         else:
-            tag_mainname = tag_record
+            if tag_record.tag == xml_mainname:
+                tag_mainname = tag_record
+            else:
+                #Problem: No tag for main name
+                MessageBox.showwarning(title="Problem", message="".join(['Filename: ', xml_filenames[i], '\n', "Couldn't find the tag for the species name."]))
+                continue
                 
         # print('P1: ', tag_mainname)
         
