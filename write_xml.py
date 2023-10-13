@@ -59,7 +59,7 @@ def edit_xml(args):
                 tag_mainname = tag_record
             else:
                 #Problem: No tag for main name
-                MessageBox.showwarning(title="Problem", message="".join(['Filename: ', xml_filenames[i], '\n', "Couldn't find the tag for the species name."]))
+                MessageBox.showwarning(title="Problem", message="".join(["Couldn't find the tag for the species name. \n", 'Filename: ', xml_filenames[i]]))
                 continue
                 
         # print('P1: ', tag_mainname)
@@ -73,11 +73,7 @@ def edit_xml(args):
             tag_reserve = list(tag_reserve)[0]
         
         # print('P2: ', xml_resnames)
-        
-        
-        tag_types.remove(tag_types.find('entity'))
-        
-        parent_tag = tag_types
+
         
         list_rcf_names = []
         for item in result_classification:
@@ -86,6 +82,10 @@ def edit_xml(args):
         list_tags = premise + list_rcf_names + xml_resnames
         print(list_tags)
 
+
+        tag_types.remove(tag_types.find('entity'))        
+        parent_tag = tag_types
+        
         for item in list_tags:
             ET.SubElement(parent_tag, item)
             parent_tag = parent_tag.find(item)
@@ -95,7 +95,7 @@ def edit_xml(args):
         try:
             if_write = trees[i].write(xml_filenames[i], encoding="utf-8", xml_declaration=False)
         except IOError:
-            MessageBox.showwarning(title="Problem", message="Solutions: \n1. Try running this program as an administrator. \n2. The XMLs cannot be read-only.")
+            MessageBox.showwarning(title="Problem", message="Couldn't write the XML. \nSolutions: \n1. Try running this program as an administrator. \n2. The XMLs cannot be read-only.")
             return
         else:
             num_complete += 1

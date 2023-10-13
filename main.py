@@ -16,8 +16,8 @@ str_hello = random.choice(config.str_hello)
 window = Tk()
 
 window.title("ZT2 Classification Editor")
-window.geometry("610x385+300+120")
-
+window.geometry("608x386+300+120")
+window.resizable(False, True)
  #Var
 
 idx_class = 0
@@ -26,7 +26,7 @@ idx_family = 0
 idx_genus = 0
 idx_species = 0
 
-result_classification = {}
+result_classification = []
 
 #Image
 image_1 = PhotoImage(file = r".\assets\favicon_zt2library.png")
@@ -80,7 +80,7 @@ def lb1_event(event):
             lb2.insert(END, i.get('name'))
             
         output_classification()
-        enable_test_button1()
+        enable_test_button()
 
 def lb2_event(event):
     global idx_class
@@ -94,7 +94,7 @@ def lb2_event(event):
             lb3.insert(END, i.get('name'))
             
         output_classification()
-        enable_test_button1()
+        enable_test_button()
 
 def lb3_event(event):
     global idx_class
@@ -109,7 +109,7 @@ def lb3_event(event):
             lb4.insert(END, i.get('name'))            
                
         output_classification()
-        enable_test_button1()
+        enable_test_button()
 
 def lb4_event(event):
     global idx_class
@@ -125,7 +125,7 @@ def lb4_event(event):
             lb5.insert(END, i.get('name'))
             
         output_classification()
-        enable_test_button1()
+        enable_test_button()
 
 def lb5_event(event):
     global idx_class
@@ -140,7 +140,7 @@ def lb5_event(event):
         label_text()
             
         output_classification()
-        enable_test_button1()
+        enable_test_button()
 
 def output_classification():
     global result_classification
@@ -156,10 +156,12 @@ def output_classification():
     elif len(lb5.curselection()) > 0 :
         result_classification = [list_class[idx_class], list_order[idx_class][idx_order], list_family[idx_class][idx_order][idx_family], list_genus[idx_class][idx_order][idx_family][idx_genus], list_species[idx_class][idx_order][idx_family][idx_genus][idx_species]]
     else:
-        result_classification = {}
+        result_classification = []
     print('rcf len =', len(result_classification))
 
-def enable_test_button1():
+def enable_test_button():
+
+    #button2
     if len(write_xml.xml_trees) > 0 :
         if len(lb1.curselection()) > 0 and lb2.size() == 0 :
             button2.config(state=NORMAL)
@@ -175,6 +177,17 @@ def enable_test_button1():
             button2.config(state=DISABLED)
     else:
         button2.config(state=DISABLED)
+        
+    #button6
+    # if result_classification != [] :
+        # if result_classification[-1].get('wiki') != None and result_classification[-1].get('wiki') != '' :
+            # button6.config(state=NORMAL)
+        # else:
+            # button6.config(state=DISABLED)
+    # else:
+        # button6.config(state=DISABLED)
+        
+            
 
 def label_text():
     mytext = ['','','','','']
@@ -211,7 +224,7 @@ bt_frame2 = Frame(bt_frame)
 bt_frame2.pack(side=LEFT, padx=68)
 
 bt_frame3 = Frame(bt_frame)
-bt_frame3.pack(side=LEFT, padx=7, ipadx=25, ipady=15)
+bt_frame3.pack(side=LEFT, ipadx=32, ipady=15)
 
 button3 = Button(bt_frame1, text="Get Taxonomy XML", command=lambda: taxonomy_xml.get_taxonomy_xml(result_classification))
 button3.pack(side=TOP, anchor=N)
@@ -225,8 +238,8 @@ button7.pack(side=LEFT, anchor=W, ipadx=4, ipady=4)
 button4 = Button(bt_frame1_1, text="?", command=lambda: MessageBox.showinfo(title="Instruction", message=str_about_info))
 button4.pack(side=LEFT, anchor=W)
 
-button1 = Button(bt_frame2, text="Select Main XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button1()])
-button1.pack(side=TOP)
+button1 = Button(bt_frame2, text="Select Main XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button()])
+button1.pack(side=TOP, expand=True, fill=X)
 
 button2 = Button(bt_frame2, text="Modify Types and Save", command=lambda: write_xml.edit_xml([write_xml.xml_trees, result_classification]))
 button2.config(state=DISABLED)

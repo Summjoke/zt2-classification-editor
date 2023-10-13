@@ -4,7 +4,7 @@ import os
 import config
 
 
-tree = ET.parse('.\docs\TaxonomyEntries.xml')
+tree = ET.parse('.\\docs\\TaxonomyEntries.xml')
 root = tree.getroot()
 
 def get_list():
