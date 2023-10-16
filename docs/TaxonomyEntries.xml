@@ -103,6 +103,9 @@
 		<Order name="Cingulata" wiki="">
 			<Family name="Dasypodidae" wiki=""/>
 		</Order>
+		<Order name="Dasyuromorphia" wiki="">
+			<Family name="Thylacinidae" wiki=""/>
+		</Order>
 		<Order name="Didelphimorphia" wiki="">
 			<Family name="Didelphidae" wiki=""/>
 		</Order>
@@ -112,9 +115,6 @@
 		</Order>
 		<Order name="Diprotodontia" wiki="">
 			<Family name="Phascolarctidae" wiki=""/>
-		</Order>
-		<Order name="Dasyuromorphia" wiki="">
-			<Family name="Thylacinidae" wiki=""/>
 		</Order>
 		<Order name="Eulipotyphla" wiki="">
 			<Family name="Erinaceidae" wiki=""/>
@@ -131,18 +131,18 @@
 		<Order name="Monotremata" wiki="">
 			<Family name="Ornithorhynchidae" wiki=""/>
 		</Order>
-		<Order name="Primata" wiki="">
-			<Family name="Circopithecidae" wiki=""/>
-			<Family name="Pongidae" wiki=""/>
-			<Family name="Hylobatidae" wiki=""/>
-			<Family name="Lemuridae" wiki=""/>
-		</Order>
 		<Order name="Perissodactyla" wiki="">
 			<Family name="Rhinocerotidae" wiki=""/>
 			<Family name="Equidae" wiki=""/>
 		</Order>
 		<Order name="Pholidota" wiki="">
 			<Family name="Manidae" wiki=""/>
+		</Order>
+		<Order name="Primata" wiki="">
+			<Family name="Circopithecidae" wiki=""/>
+			<Family name="Pongidae" wiki=""/>
+			<Family name="Hylobatidae" wiki=""/>
+			<Family name="Lemuridae" wiki=""/>
 		</Order>
 		<Order name="Proboscidea" wiki="">
 			<Family name="Elephantidae" wiki=""/>
