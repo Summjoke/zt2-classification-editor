@@ -58,10 +58,10 @@ def open_wiki(args):
         linkname = result_classification[-1].get('name')
         
     elif website == 'ZT2Library' :
-        # webdir = 'https://zt2downloadlibrary.fandom.com/wiki/'
-        # linkname = 'Category:'+result_classification[-1].get('wiki')
-        MessageBox.showinfo(title="Coming Up", message="That's the future plan.")
-        return
+        webdir = 'https://zt2downloadlibrary.fandom.com/wiki/'
+        linkname = 'Category:'+result_classification[-1].get('wiki')
+        # MessageBox.showinfo(title="Coming Up", message="That's the future plan.")
+        # return
         
     else:
         return

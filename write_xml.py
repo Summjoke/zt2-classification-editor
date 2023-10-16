@@ -7,9 +7,9 @@ import config
 
 
 
-xml_trees = {}
+xml_trees = []
 
-xml_filenames = {}
+xml_filenames = []
 
 
 def get_xmls():
@@ -17,15 +17,27 @@ def get_xmls():
     global xml_filenames
     
     filenames = askopenfilenames(title="Select XMLs", filetypes=[("xml files", "*.xml")])
-    print('Filenames:', filenames)
     
     if len(filenames) == 0 :
         return
     
-    xml_filenames = filenames
-    xml_trees = {}
-    for i in range(len(xml_filenames)):
-        xml_trees[i] = ET.parse(xml_filenames[i])
+    xml_trees = []
+    xml_filenames = []
+    
+    for item in filenames:
+        try:
+            xml_trees.append(ET.parse(item))
+        except Exception:
+            MessageBox.showwarning(title="Problem", message="".join(["This file has encountered a parsing error. Please edit it manually. \n", 'Filename: ', item]))
+            continue
+        else:
+            xml_filenames.append(item)
+        finally:
+            pass
+    print('Filenames:', xml_filenames)
+    
+    
+    
 
 
 def edit_xml(args):
