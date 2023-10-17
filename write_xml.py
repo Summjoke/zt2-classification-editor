@@ -28,7 +28,7 @@ def get_xmls():
         try:
             xml_trees.append(ET.parse(item))
         except Exception:
-            MessageBox.showwarning(title="Problem", message="".join(["This file has encountered a parsing error. Please edit it manually. \n", 'Filename: ', item]))
+            MessageBox.showwarning(title="Problem", message="".join(["This file has encountered a parsing error. Please edit it manually. \n", 'Filename: ', item.split('/')[-1], '\n', 'Solution: \n', 'Make sure that there are no two identical attributes under <BFAIEntityDataShared>.']))
             continue
         else:
             xml_filenames.append(item)
@@ -71,7 +71,7 @@ def edit_xml(args):
                 tag_mainname = tag_record
             else:
                 #Problem: No tag for main name
-                MessageBox.showwarning(title="Problem", message="".join(["Couldn't find the tag for the species name. \n", 'Filename: ', xml_filenames[i]]))
+                MessageBox.showwarning(title="Problem", message="".join(["Couldn't find the tag for the species name. \n", 'Filename: ', xml_filenames[i].split('/')[-1]]))
                 continue
                 
         # print('P1: ', tag_mainname)
