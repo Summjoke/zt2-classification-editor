@@ -238,7 +238,7 @@ button7.pack(side=LEFT, anchor=W, ipadx=4, ipady=4)
 button4 = Button(bt_frame1_1, text="?", command=lambda: MessageBox.showinfo(title="Instruction", message=str_about_info))
 button4.pack(side=LEFT, anchor=W)
 
-button1 = Button(bt_frame2, text="Select Main XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button()])
+button1 = Button(bt_frame2, text="Select Animal XMLs", command=lambda: [write_xml.get_xmls(), enable_test_button()])
 button1.pack(side=TOP, expand=True, fill=X)
 
 button2 = Button(bt_frame2, text="Modify Types and Save", command=lambda: write_xml.edit_xml([write_xml.xml_trees, result_classification]))
