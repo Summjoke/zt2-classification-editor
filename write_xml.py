@@ -107,8 +107,8 @@ def edit_xml(args):
         try:
             if_write = trees[i].write(xml_filenames[i], encoding="utf-8", xml_declaration=False)
         except IOError:
-            MessageBox.showwarning(title="Problem", message="Couldn't write the XML. \nSolutions: \n1. Try running this program as an administrator. \n2. The XMLs cannot be read-only.")
-            return
+            MessageBox.showwarning(title="Problem", message="".join(["Couldn't write the XML. \n", 'Filename: ', xml_filenames[i].split('/')[-1], "\nSolutions: \n1. Try running this program as an administrator. \n2. The XMLs cannot be read-only."]))
+            continue
         else:
             num_complete += 1
              # os.startfile(xml_filenames[i]+'.xml')
