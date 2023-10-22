@@ -16,7 +16,7 @@ def get_xmls():
     global xml_trees
     global xml_filenames
     
-    filenames = askopenfilenames(title="Select XMLs", filetypes=[("xml files", "*.xml")])
+    filenames = askopenfilenames(title="Select Animal XMLs", filetypes=[("xml files", "*.xml")])
     
     if len(filenames) == 0 :
         return
