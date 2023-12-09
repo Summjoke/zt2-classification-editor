@@ -16,7 +16,7 @@ str_hello = random.choice(config.str_hello)
 window = Tk()
 
 window.title("ZT2 Classification Editor")
-window.geometry("596x386+300+120")
+window.geometry("602x386+300+120")
 window.resizable(False, True)
  #Var
 
