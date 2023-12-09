@@ -16,7 +16,7 @@ str_hello = random.choice(config.str_hello)
 window = Tk()
 
 window.title("ZT2 Classification Editor")
-window.geometry("606x386+300+120")
+window.geometry("602x386+300+120")
 window.resizable(False, True)
  #Var
 
@@ -221,7 +221,7 @@ bt_frame1 = Frame(bt_frame)
 bt_frame1.pack(side=LEFT)
 
 bt_frame2 = Frame(bt_frame)
-bt_frame2.pack(side=LEFT, padx=68)
+bt_frame2.pack(side=LEFT, padx=66)
 
 bt_frame3 = Frame(bt_frame)
 bt_frame3.pack(side=LEFT, ipadx=32, ipady=15)
