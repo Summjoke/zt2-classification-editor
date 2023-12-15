@@ -221,7 +221,7 @@ bt_frame1 = Frame(bt_frame)
 bt_frame1.pack(side=LEFT)
 
 bt_frame2 = Frame(bt_frame)
-bt_frame2.pack(side=LEFT, padx=63)
+bt_frame2.pack(side=LEFT, padx=69)
 
 bt_frame3 = Frame(bt_frame)
 bt_frame3.pack(side=LEFT, ipadx=32, ipady=15)
